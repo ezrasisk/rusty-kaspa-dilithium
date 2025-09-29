@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package kaspa;
+
+message TransactionInput {
+    bytes previous_outpoint_address = 1;
+    bytes signature = 2;
+    bytes script = 3; // Added for P2SH redeem script
+    uint32 sequence = 4;
+}
+
+message TransactionOutput {
+    uint64 value = 1;
+    bytes script_pubkey = 2;
+}
+
+message Transaction {
+    uint32 version = 1;
+    repeated TransactionInput inputs = 2;
+    repeated TransactionOutput outputs = 3;
+    uint64 lock_time = 4;
+    uint64 mass = 5;
+}

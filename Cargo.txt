@@ -1,0 +1,13 @@
+[package]
+name = "kaspa-pqc"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+pqcrypto-dilithium = "0.4"
+kaspa-core = { git = "https://github.com/kaspanet/rusty-kaspa" }
+kaspa-hashes = { git = "https://github.com/kaspanet/rusty-kaspa" }
+kaspa-addresses = { git = "https://github.com/kaspanet/rusty-kaspa" }
+kaspa-consensus = { git = "https://github.com/kaspanet/rusty-kaspa" }
+serde = { version = "1.0", features = ["derive"] }
+rand = "0.8"
